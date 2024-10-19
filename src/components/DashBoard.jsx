@@ -9,6 +9,14 @@ const DashBoard = () => {
     navigate('/yourjobs'); // Navigate to the desired route
   }
 
+  function SeekHandler(){
+    navigate('/seekjobs');
+  }
+
+  function YourWorkHandler(){
+    navigate('/yourwork');
+  }
+
   return (
     <div>
       {/* Header Section */}
@@ -33,9 +41,10 @@ const DashBoard = () => {
       {/* Main Section with Centered Buttons */}
       <main className="main-content">
         <div className="button-container">
-          <button className="main-button">Seek Task</button>
+          <button className="main-button" onClick={SeekHandler}>Seek Task</button>
           <button className="main-button" onClick={TaskHandler}>Add Task</button>
           <button className="main-button">Issues</button>
+          <button onClick={YourWorkHandler} className="main-button">Your Work</button>
         </div>
       </main>
     </div>

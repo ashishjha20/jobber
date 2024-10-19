@@ -6,6 +6,9 @@ import RegisterPage from "./components/RegisterPage"; // You need to create this
 import AnimatedBackground from './components/AnimatedBackground.jsx';
 import DashBoard from "./components/DashBoard.jsx";
 import YourJobs from "./components/YourJobs.jsx";
+import AddJobs from "./components/AddJobs.jsx"
+import SeekJob from "./components/SeekJob.jsx";
+import YourWork from "./components/YourWork.jsx";
 
 const App = () => {
   return (
@@ -25,7 +28,13 @@ const App = () => {
           <DashBoard/>
           </div>}></Route>
         <Route path="/yourjobs" element={<YourJobs></YourJobs>}></Route>
+
+        <Route path="/addjobs" element={<AddJobs/>}></Route>
+        <Route path="/seekjobs" element={<SeekJob/>}></Route>
+        <Route path="/yourwork" element={<YourWork/>}></Route>
       </Routes>
+
+
     </Router>
   );
 };
