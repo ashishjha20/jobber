@@ -1,0 +1,49 @@
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    color: #00FF00; /* Neon green text */
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00FF00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.2rem;
+  }
+  
+  button:hover {
+    background-color: #00cc00;
+  }
+  
