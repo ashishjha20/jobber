@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import './LoginPage.css'; // CSS file for styling
+import { EmailContext } from "../context/EmailContext";
+import { useContext } from "react";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -8,8 +10,9 @@ const LoginPage = () => {
   const [error, setError] = useState(''); // State for error messages
   const [loading, setLoading] = useState(false); // State for loading status
   const navigate = useNavigate(); // Initialize useNavigate for navigation
-
+  const {setEmails}=useContext(EmailContext);
   const handleLogin = async (e) => {
+    
     e.preventDefault();
     setLoading(true);
     setError(''); // Reset error message
@@ -28,6 +31,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         // If login is successful, navigate to the dashboard
+        setEmails(email);
         navigate('/dashboard');
       } else {
         // If login fails, set the error message
