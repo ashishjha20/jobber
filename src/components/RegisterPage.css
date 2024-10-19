@@ -1,7 +1,5 @@
-/* RegisterPage.css */
-
 .register-container {
-    position: relative;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,50 +7,83 @@
     align-items: center;
     color: white;
     font-family: Arial, sans-serif;
+    overflow: hidden;
   }
   
- 
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Ensures the video is behind the register box */
+  }
   
   .register-box {
     background: rgba(0, 0, 0, 0.75);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #32CD32;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
     text-align: center;
+    position: relative;
+    z-index: 1; /* Ensures the box is on top of the video */
+    transition: box-shadow 0.3s;
+  }
+  
+  .register-box:hover {
+    box-shadow: 0 0 15px #32CD32;
   }
   
   h1 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    color: #32CD32;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
   }
   
   .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
   }
   
   input, select {
     width: 100%;
-    padding: 0.8rem;
-    margin-top: 0.5rem;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
   }
   
   button.submit-btn {
-    background-color: #32CD32; /* Adjust as per your theme */
+    background-color: #32CD32;
     color: white;
-    padding: 0.8rem 2rem;
+    padding: 0.6rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    grid-column: span 2; /* Makes the button span both columns */
+    width: 100%; /* Full width button */
   }
   
   button.submit-btn:hover {
     background-color: #28a745;
   }
-  
+  select {
+    color: black; /* Set the text color of the options to black */
+  }

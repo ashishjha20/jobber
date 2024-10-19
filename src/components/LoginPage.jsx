@@ -1,13 +1,44 @@
 import React, { useState } from "react";
-import './LoginPage.css'; // Create a CSS file for styling
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import './LoginPage.css'; // CSS file for styling
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(''); // State for error messages
+  const [loading, setLoading] = useState(false); // State for loading status
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Login with:", email, password);
+    setLoading(true);
+    setError(''); // Reset error message
+
+    try {
+      // Send login data to the server
+      const response = await fetch(`http://localhost:4000/api/v1/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }), // Send email and password
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // If login is successful, navigate to the dashboard
+        navigate('/dashboard');
+      } else {
+        // If login fails, set the error message
+        setError(result.error || 'Login failed. Please check your credentials.');
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      setError('An error occurred. Please try again.'); // Set generic error message
+    } finally {
+      setLoading(false); // Reset loading status
+    }
   };
 
   return (
@@ -19,6 +50,8 @@ const LoginPage = () => {
           <h1>Login</h1>
           <p>Welcome back! Please login to your account.</p>
         </div>
+        {loading && <p>Loading...</p>} {/* Show loading message */}
+        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Show error message */}
         <form className="login-form" onSubmit={handleLogin}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
