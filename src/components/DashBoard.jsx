@@ -9,26 +9,26 @@ const DashBoard = () => {
     navigate('/yourjobs'); // Navigate to the desired route
   }
 
-  function SeekHandler(){
+  function SeekHandler() {
     navigate('/seekjobs');
   }
 
-  function YourWorkHandler(){
+  function YourWorkHandler() {
     navigate('/yourwork');
   }
 
   return (
-    <div>
+    <div className='main1'>
       {/* Header Section */}
       <header>
         <div className="container">
           <div className="logo">
-            <img className="img" src="jobify logo full.png" alt="Jobify Logo" />
+            <img className="img" src='' alt="Jobify Logo" />
           </div>
           <nav>
             <ul>
-              <li><a href="#">Developers</a></li>
-              <li><a href="#">About</a></li>
+              {/* <li><a href="#">Developers</a></li>
+              <li><a href="#">About</a></li> */}
             </ul>
           </nav>
           <div className="header-buttons">

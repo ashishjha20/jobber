@@ -9,6 +9,7 @@ import YourJobs from "./components/YourJobs.jsx";
 import AddJobs from "./components/AddJobs.jsx"
 import SeekJob from "./components/SeekJob.jsx";
 import YourWork from "./components/YourWork.jsx";
+import ConnectWallet from "./components/ConnectWallet.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,11 @@ const App = () => {
         <Route path="/addjobs" element={<AddJobs/>}></Route>
         <Route path="/seekjobs" element={<SeekJob/>}></Route>
         <Route path="/yourwork" element={<YourWork/>}></Route>
+        <Route path="/connect-wallet" element={
+          <div>
+            <AnimatedBackground></AnimatedBackground>
+            <ConnectWallet/>
+            </div>}></Route>
       </Routes>
 
 

@@ -4,6 +4,7 @@ import './MainPage.css'; // Ensure you create this CSS file based on your existi
 import students1 from '../images/students1.png'; // Update paths accordingly
 import jobifyLogo from '../images/JOBIFY LOGO FULL.png'; // Replace with actual paths
 import aiaChainImage from '../images/12345.jpg'; // Update with actual paths
+import ConnectWallet from "./ConnectWallet";
 
 // Preloader Component
 const Preloader = () => (
@@ -15,6 +16,8 @@ const Preloader = () => (
 // Header Component
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate=useNavigate()
+ 
 
   return (
     <header>
@@ -39,7 +42,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header-buttons">
-          <a href="#" className="connect-wallet">Connect Wallet</a>
+          <a href="/connect-wallet" className="connect-wallet">Connect Wallet</a>
           <a href="#" className="get-start">Get Start</a>
         </div>
       </div>

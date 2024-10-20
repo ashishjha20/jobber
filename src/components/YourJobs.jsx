@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { EmailContext } from "../context/EmailContext";
-import './YourJobs.css';
+
 import { useNavigate } from "react-router-dom";
 import InterestedCandidatesModal from './InterestedCandidatesModal'; // Import the modal component
 
@@ -65,6 +65,25 @@ const YourJobs = () => {
     }
 
     return (
+        <div>
+            {/* Add the Header here */}
+            <header>
+                <div className="container">
+                    <div className="logo">
+                        <img className="img" src="jobify logo full.png" alt="Jobify Logo" />
+                    </div>
+                    <nav>
+                        <ul>
+                            {/* <li><a href="#">Developers</a></li>
+                            <li><a href="#">About</a></li> */}
+                        </ul>
+                    </nav>
+                    <div className="header-buttons">
+                        <a href="#" className="connect-wallet">Connect Wallet</a>
+                        <a href="#" className="get-start">Get Started</a>
+                    </div>
+                </div>
+            </header>
         <div className="container">
             {error && <p className="text-red-500 text-center">{error}</p>} {/* Display error if exists */}
 
@@ -123,7 +142,7 @@ const YourJobs = () => {
             {selectedJob && (
                 <InterestedCandidatesModal job={selectedJob} onClose={closeModal} />
             )}
-        </div>
+        </div></div>
     );
 };
 

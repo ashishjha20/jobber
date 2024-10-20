@@ -7,13 +7,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    /* background-image: url('../images/2.gif'); Set the GIF as the background */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Ensure the background stays in place while scrolling */
+    background-attachment: fixed;
     color: #fff;
 }
-
 
 /* Header Section */
 header {
@@ -84,10 +82,12 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
+    width: 100vh;
     text-align: center;
-    background-color: #000;
     padding-top: 100px; /* To account for fixed header */
+    position: fixed;
+    margin-left: 55vh;
 }
 
 .button-container {
@@ -95,21 +95,24 @@ nav ul li a {
     gap: 20px;
 }
 
+/* Updated Button Styles */
 .main-button {
-    background-color: #1c1c1c;
-    color: #00ff00;
-    border: 2px solid #29c329;
+    background-color: #000201; 
+    color: #00ff00; /* Green text color */
+    border: 2px solid #29c329; /* Green border in the rest state */
     padding: 15px 30px;
     text-transform: uppercase;
     font-size: 18px;
     text-decoration: none;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .main-button:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 0px 15px 5px #29c329;
+    transform: translateY(-10px); /* Raise the button slightly */
+    box-shadow: 0px 0px 15px 5px #29c329; 
+    background-color: #000201;
 }
 
 /* Footer Section */
@@ -180,4 +183,8 @@ nav ul li a {
 .footer-copyright {
     font-size: 14px;
     color: #888;
+}
+
+.main1 {
+    height: 0vh;
 }
