@@ -23,3 +23,29 @@
   transform: translateY(-10px);
   box-shadow: 0 0 15px #32CD32;
 }
+#bhenki{
+  height: 7vh;
+  display: flex;
+  
+  width: 27vw;
+  justify-content: space-around;
+}
+#zx{
+  height: 5vh;
+  transform: translateY(-5vh);
+}
+#zx p{
+  transform: translateY(-1vh);
+}
+#pura{
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  padding: 15px;
+  width: 30vw;
+}
+#bhenki button{
+  width: 10vw;
+}
+#bhenki button p{
+  transform: translateY(-1vh);
+}

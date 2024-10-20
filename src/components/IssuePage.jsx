@@ -4,7 +4,7 @@ import axios from "axios";
 import './IssuePage.css';
 
 const CircularProgress = ({ percentage, color }) => {
-  const radius = 30; // Radius of the circle
+  const radius = 25; // Radius of the circle
   const normalizedRadius = radius - 5; // Normalized radius for the stroke
   const circumference = normalizedRadius * 2 * Math.PI; // Circumference of the circle
   const strokeDashoffset = circumference - (percentage / 100) * circumference; // Dash offset based on percentage

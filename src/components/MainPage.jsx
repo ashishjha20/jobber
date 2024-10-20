@@ -5,7 +5,10 @@ import students1 from '../images/students1.png'; // Update paths accordingly
 import jobifyLogo from '../images/JOBIFY LOGO FULL.png'; // Replace with actual paths
 import aiaChainImage from '../images/12345.jpg'; // Update with actual paths
 import ConnectWallet from "./ConnectWallet";
-
+import tani from '../images/tani.jpg'
+import vats from '../images/vats.jpg'
+import ashish from '../images/ashish.jpg'
+import aryan from '../images/aryan.png'
 // Preloader Component
 const Preloader = () => (
   <div className="preloader">
@@ -53,7 +56,7 @@ const HeroSection = () => {
         <div id="text-section">
         <h1><span id="heading">Emerging opportunities</span>
         <br/>
-        <span>Your job search ends here</span></h1>
+        <span>Your Job Search Ends here</span></h1>
         <p>Discover 50 lakh plus career opportunities</p>
         </div>
         <div className="buttons">
@@ -105,25 +108,25 @@ const TeamSection = () => (
         name="Tanishq Gupta"
         role="Founder (Web Developer)"
         desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
-        imgSrc={jobifyLogo}
+        imgSrc={tani}
       />
       <TeamMember
         name="Aryan Sharma"
         role="Founder (Web Developer)"
         desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
-        imgSrc={jobifyLogo}
+        imgSrc={aryan}
       />
       <TeamMember
         name="Y.Vatsal"
         role="Founder (Web Developer)"
         desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
-        imgSrc={jobifyLogo}
+        imgSrc={vats}
       />
       <TeamMember
         name="Ashish Jha"
         role="Founder (Web Developer)"
         desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
-        imgSrc={jobifyLogo}
+        imgSrc={ashish}
       />
     </div>
   </section>

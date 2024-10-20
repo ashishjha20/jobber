@@ -187,3 +187,28 @@ button:hover {
     display: flex;
   align-items: center;
 }
+#teri {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#maki{
+    display: flex;
+    gap: 10px; /* This will add space between the buttons */
+    
+}
+
+#maki button {
+    flex: 1; /* Make both buttons take equal space */
+    width: 10vw; /* Ensure the buttons don't shrink too much */
+    height: 3vh;
+    font-size: small;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#maki button p{
+    transform: translateY(-1.6vh);
+}

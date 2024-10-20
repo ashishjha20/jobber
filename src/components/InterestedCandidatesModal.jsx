@@ -74,15 +74,18 @@ const InterestedCandidatesModal = ({ job, onClose, onJobAssigned }) => {
                 <ul>
                     {job.interestedCandidateEmails && job.interestedCandidateEmails.length > 0 ? (
                         job.interestedCandidateEmails.map((email, index) => (
-                            <div key={index}>
-                                <li className="text-lg">
-                                    {email}
+                            <div id ="pura"key={index}>
+                                
+                                <li id="zx" className="text-lg">
+                                    <p>{email}</p>
                                 </li>
+                                <div id="bhenki">
                                 {/* Assign button to mark the job */}
                                 <button onClick={() => AssignHandler(job, email)} className="mt-2 bg-green-500 text-white py-1 px-3 rounded">
-                                    Assign
+                                    <p>Assign</p>
                                 </button>
-                                <button className="mt-2 bg-blue-500 text-white py-1 px-3 rounded">View Rating</button>
+                                <button className="mt-2 bg-blue-500 text-white py-1 px-3 rounded"><p>Rating</p></button>
+                                </div>
                             </div>
                         ))
                     ) : (

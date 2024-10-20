@@ -189,29 +189,30 @@ const YourJobs = () => {
                                             <p className="text-lg"><strong>Deadline:</strong> {formattedDeadline}</p>
 
                                             {isPastDeadline && job.marked && (
-                                                <div className="mt-4">
-                                                    {/* Conditionally render buttons or labels based on job status */}
-                                                    {jobStatuses[job._id] === "accepted" ? (
-                                                        <p className="text-green-500">Accepted</p>
-                                                    ) : jobStatuses[job._id] === "issueRaised" ? (
-                                                        <p className="text-red-500">Issue Raised</p>
-                                                    ) : (
-                                                        <div className="flex justify-between">
-                                                            <button
-                                                                className="bg-green-500 text-white py-2 px-4 rounded"
-                                                                onClick={() => handleAccept(job._id)}
-                                                            >
-                                                                Accept
-                                                            </button>
-                                                            <button
-                                                                className="bg-red-500 text-white py-2 px-4 rounded"
-                                                                onClick={() => handleRaiseIssue(job._id)}
-                                                            >
-                                                                Raise Issue
-                                                            </button>
-                                                        </div>
-                                                    )}
-                                                </div>
+                                               <div className="mt-4 button-container" id="teri">
+                                               {/* Conditionally render buttons or labels based on job status */}
+                                               {jobStatuses[job._id] === "accepted" ? (
+                                                   <p className="text-green-500">Accepted</p>
+                                               ) : jobStatuses[job._id] === "issueRaised" ? (
+                                                   <p className="text-red-500">Issue Raised</p>
+                                               ) : (
+                                                   <div id= "maki">
+                                                       <button
+                                                           className="bg-green-500 text-white py-2 px-4 rounded"
+                                                           onClick={() => handleAccept(job._id)}
+                                                       >
+                                                         <p>Accept</p>
+                                                       </button>
+                                                       <button 
+                                                           className="bg-red-500 text-white py-2 px-4 rounded"
+                                                           onClick={() => handleRaiseIssue(job._id)}
+                                                       >
+                                                           <p>Raise Issue</p>
+                                                       </button>
+                                                   </div>
+                                               )}
+                                           </div>
+                                           
                                             )}
 
                                             {!job.marked && (
