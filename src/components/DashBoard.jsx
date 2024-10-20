@@ -71,6 +71,9 @@ const DashBoard = () => {
     navigate('/yourwork');
   }
 
+  function IssueHandler(){
+    navigate('/issue');
+  }
   const closePopup = () => {
     setShowPopup(false); // Function to close the pop-up
   };
@@ -108,7 +111,7 @@ const DashBoard = () => {
         <div className="button-container">
           <button className="main-button" onClick={SeekHandler}>Seek Task</button>
           <button className="main-button" onClick={() => TaskHandler(amount)}>Add Task</button>
-          <button className="main-button">Issues</button>
+          <button className="main-button" onClick={IssueHandler}>Issues</button>
           <button onClick={YourWorkHandler} className="main-button">Your Work</button>
         </div>
       </main>

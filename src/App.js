@@ -10,6 +10,7 @@ import AddJobs from "./components/AddJobs.jsx"
 import SeekJob from "./components/SeekJob.jsx";
 import YourWork from "./components/YourWork.jsx";
 import ConnectWallet from "./components/ConnectWallet.jsx";
+import IssuePage from "./components/IssuePage.jsx";
 
 const App = () => {
   return (
@@ -42,6 +43,8 @@ const App = () => {
           <AnimatedBackground></AnimatedBackground>
           <ConnectWallet />
         </div>}></Route>
+
+      <Route path="/issue" element={<IssuePage></IssuePage>}></Route>
     </Routes>
 
 

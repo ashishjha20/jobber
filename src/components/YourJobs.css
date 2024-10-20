@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #1c1c1c;
     color: #fff;
-    padding-top: 90px; /* Ensure content is below the fixed header */
+    /* padding-top: 90px; Ensure content is below the fixed header */
 }
 
 /* Header Section */
@@ -173,7 +173,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+   
     padding: 20px;
     z-index: 200;
     border-radius: 10px;

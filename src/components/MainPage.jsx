@@ -25,22 +25,7 @@ const Header = () => {
         <div className="logo">
           <img className="img" src={jobifyLogo} alt="Jobify Logo" />
         </div>
-        <nav>
-          <ul>
-            <li className="dropdown" onClick={() => setDropdownOpen(!dropdownOpen)}>
-              <a href="#">Developers</a>
-              {dropdownOpen && (
-                <ul className="dropdown-content">
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                </ul>
-              )}
-            </li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </nav>
+        
         <div className="header-buttons">
           <a href="/connect-wallet" className="connect-wallet">Connect Wallet</a>
           <a href="#" className="get-start">Get Start</a>
@@ -65,8 +50,12 @@ const HeroSection = () => {
   return (
     <section className="hero">
       <div className="hero-text">
-        <h1><span id="heading">Emerging opportunities</span><br /><span>Your job search ends here</span></h1>
+        <div id="text-section">
+        <h1><span id="heading">Emerging opportunities</span>
+        <br/>
+        <span>Your job search ends here</span></h1>
         <p>Discover 50 lakh plus career opportunities</p>
+        </div>
         <div className="buttons">
           <a onClick={handleLoginClick} className="btn-team">LOGIN</a>
           <a onClick={handleRegisterClick} className="btn-foundation">REGISTER</a>
@@ -83,14 +72,13 @@ const HeroSection = () => {
 const InfoSection = () => (
   <section className="info-section">
     <div className="info-box">
-      <h2>AIA Accelerator Program: Propelling the AIA Ecosystem Towards Prosperity with Great Strides</h2>
-      <p>The AIA Accelerator Program aims to support and accelerate the development of artificial intelligence startups and innovative projects...</p>
-      <a href="#">&#x2192;</a>
-    </div>
+      <h2>Search for your preferred work on jobify</h2>
+      <p>Discover your ideal job with Jobify! Our platform simplifies the job search process, offering a vast array of listings tailored to your skills and preferences. With user-friendly filters, you can easily find opportunities that match your career goals. Whether you’re seeking remote work or in-person roles, Jobify connects you to the jobs you truly want. Start your journey today!</p>
+          </div>
     <div className="info-box">
-      <h2>AIA Chain Hackathon Competition: Finding the Next Killer Application</h2>
-      <p>AIA Chain Hackathon Competition is a vibrant event aimed at inspiring innovation and uncovering the potential of blockchain applications...</p>
-      <a href="#">&#x2192;</a>
+      <h2>Look out for the perfect person to do your job</h2>
+      <p>Finding the perfect candidate for your job is essential for success. With targeted search tools and detailed profiles, you can connect with professionals who possess the skills and experience you need. Streamline your hiring process by accessing a diverse talent pool, ensuring you choose someone who aligns with your company culture and objectives. Make your next hire a great fit</p>
+     
     </div>
   </section>
 );
@@ -114,27 +102,27 @@ const TeamSection = () => (
     </section>
     <div className="team-container">
       <TeamMember
-        name="Tanishk Gupta"
-        role="Founder (CEO)"
-        desc="Graduated from Stanford University with a degree in Computer Science..."
+        name="Tanishq Gupta"
+        role="Founder (Web Developer)"
+        desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
         imgSrc={jobifyLogo}
       />
       <TeamMember
         name="Aryan Sharma"
-        role="Co-Founder Technical Director (CTO)"
-        desc="Graduated from Columbia University with a degree in Software Engineering..."
+        role="Founder (Web Developer)"
+        desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
         imgSrc={jobifyLogo}
       />
       <TeamMember
         name="Y.Vatsal"
-        role="Chief Marketing Officer (CMO)"
-        desc="Graduated from Bogazici University, Growth Hacker..."
+        role="Founder (Web Developer)"
+        desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
         imgSrc={jobifyLogo}
       />
       <TeamMember
         name="Ashish Jha"
-        role="Public Relations Manager"
-        desc="Graduated from National University of Singapore, Tier 1 investor..."
+        role="Founder (Web Developer)"
+        desc="2nd year student graduating from MNNIT ALLAHBAD in 2027 with a degree in Computer Science and Engineering"
         imgSrc={jobifyLogo}
       />
     </div>
@@ -150,37 +138,16 @@ const AIAChainSection = () => (
       </div>
       <div className="aia-chain-content">
         <h2>About Us</h2>
-        <p>AIAchain is an emerging public chain that combines AI technology, financial payment, and is compatible with EVM. It optimizes transaction speed and reduces costs while maintaining a high degree of security and scalability.</p>
-        <p>Through the parallel operation of the native token AIA and the adopted APoS and AISIN consensus mechanisms, it promotes the widespread application of blockchain technology, provides efficient technical solutions, and supports enterprises and developers around the world to launch innovations. Blockchain empowers the future with secure investments.</p>
-        <a href="#">View More →</a>
+        <p>Welcome to Jobify, your go-to platform for job seekers and employers! We simplify the job search process, offering a user-friendly interface for freelancers to explore diverse opportunities, whether remote, part-time, or full-time. For employers, Jobify makes posting job openings and attracting top talent effortless.</p>
+        <p>Our unique feature allows freelancers to raise issues about payment disputes, ensuring their concerns are addressed promptly. We are dedicated to fostering a fair and vibrant job marketplace. Join Jobify today and take the next step in your career or hiring journey!</p>
+       
       </div>
     </div>
   </section>
 );
 
 // Footer Section Component
-const Footer = () => (
-  <footer className="footer-section">
-    <div className="footer-container">
-      <div className="footer-logo">
-        <img src={jobifyLogo} alt="Jobify Logo" />
-      </div>
-      <div className="footer-social">
-        <p>Add icons here</p>
-      </div>
-      <div className="footer-links">
-        <ul>
-          <li><a href="https://linkedin.com/in/team-member1" target="_blank" rel="noopener noreferrer">Team Member 1</a></li>
-          <li><a href="https://linkedin.com/in/team-member2" target="_blank" rel="noopener noreferrer">Team Member 2</a></li>
-          <li><a href="https://linkedin.com/in/team-member3" target="_blank" rel="noopener noreferrer">Team Member 3</a></li>
-          <li><a href="https://linkedin.com/in/team-member4" target="_blank" rel="noopener noreferrer">Team Member 4</a></li>
-        </ul>
-      </div>
-      <hr className="footer-line" />
-      <p className="footer-copyright">©2024 Copyright AIA. All rights reserved.</p>
-    </div>
-  </footer>
-);
+
 
 // Main App Component
 const MainPage = () => {
@@ -200,7 +167,7 @@ const MainPage = () => {
           <InfoSection />
           <TeamSection />
           <AIAChainSection />
-          <Footer />
+         
         </>
       )}
     </div>

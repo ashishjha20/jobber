@@ -12,6 +12,7 @@ const AddJobForm = () => {
     workType: "",
     description: "",
     requirements: "",
+    deadline:"",
   });
 
   const [message, setMessage] = useState(""); // To show success or error message
@@ -56,6 +57,7 @@ const AddJobForm = () => {
           workType: "",
           description: "",
           requirements: "",
+          deadline:"",
         }); // Reset form
       } else {
         setError(result.message); // Display error message
@@ -143,6 +145,20 @@ const AddJobForm = () => {
             type="text"
             name="role"
             value={formData.role}
+            onChange={handleInputChange}
+            className="w-full px-3 py-2 border rounded-lg"
+            required
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block font-bold mb-2" htmlFor="deadline">
+            Deadline (in days)
+          </label>
+          <input
+            type="number"
+            name="deadline"
+            value={formData.deadline}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border rounded-lg"
             required

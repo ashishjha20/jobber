@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .register-container {
     position: fixed;
     width: 100vw;
@@ -5,6 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin: 0;
+    padding: 0; */
     color: white;
     font-family: Arial, sans-serif;
     overflow: hidden;
@@ -14,8 +21,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: 0; /* Ensures the video is behind the register box */
   }
@@ -66,6 +73,7 @@
     border: none;
     border-radius: 4px;
     font-size: 0.8rem;
+    height: 5vh;
   }
   
   button.submit-btn {
