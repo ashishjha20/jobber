@@ -26,22 +26,26 @@ const App = () => {
         </div>} /> {/* Register page route */}
         <Route path='/dashboard' element={<div>
           <AnimatedBackground />
-          <DashBoard/>
-          </div>}></Route>
+          <DashBoard />
+        </div>}></Route>
         <Route path="/yourjobs" element={<YourJobs></YourJobs>}></Route>
 
-        <Route path="/addjobs" element={<AddJobs/>}></Route>
-        <Route path="/seekjobs" element={<SeekJob/>}></Route>
-        <Route path="/yourwork" element={<YourWork/>}></Route>
-        <Route path="/connect-wallet" element={
+        <Route path="/addjobs" element={<AddJobs />}></Route>
+        <Route path="/seekjobs" element={
           <div>
             <AnimatedBackground></AnimatedBackground>
-            <ConnectWallet/>
-            </div>}></Route>
-      </Routes>
+            <SeekJob />
+          </div>}></Route>
+      <Route path="/yourwork" element={<YourWork />}></Route>
+      <Route path="/connect-wallet" element={
+        <div>
+          <AnimatedBackground></AnimatedBackground>
+          <ConnectWallet />
+        </div>}></Route>
+    </Routes>
 
 
-    </Router>
+    </Router >
   );
 };
 

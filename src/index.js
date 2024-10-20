@@ -5,11 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { EmailProvider } from './context/EmailContext';
 import { BrowserRouter } from 'react-router-dom';
+import { AmountProvider } from './context/AmountContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <EmailProvider>
+     <AmountProvider>
 
-    <App />
+     <App />
+
+     </AmountProvider>
+
+    
 
 
   </EmailProvider>
