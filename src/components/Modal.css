@@ -1,20 +1,25 @@
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-content {
-    background: rgb(19, 121, 223);
-    padding: 20px;
-    border-radius: 8px;
-    width: 500px;
-    text-align: center;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+  border: 2px solid #00ff00;
+}
+
+.modal-content:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #32CD32;
+}

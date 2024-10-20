@@ -56,12 +56,12 @@ const ConnectWallet = () => {
       {!selectedWallet ? (
         <div id="walletModal" className="modal" style={{ display: 'block' }}>
           <div className="modal-content">
-            <span
+            {/* <span
               className="close"
               onClick={() => document.getElementById('walletModal').style.display = 'none'}
             >
               &times;
-            </span>
+            </span> */}
             <h2 className="text-xl font-bold mb-4">Connect a Wallet</h2>
 
             <div className="wallet-options">
@@ -104,7 +104,7 @@ const ConnectWallet = () => {
           </button>
         </div>
       ) : (
-        <div>
+        <div id='fuck'>
           <h3 className="text-lg font-bold mb-2">Scan the QR code to download {selectedWallet}:</h3>
           <QRCodeCanvas value={qrUrl} size={256} />
 
@@ -113,9 +113,9 @@ const ConnectWallet = () => {
               setSelectedWallet(null);
               setQrUrl('');
             }}
-            className="bg-red-500 text-white py-2 px-4 rounded mt-4"
+            className="bg-red-500 text-white py-2 px-4 rounded mt-4 aadibt"
           >
-            Back to Wallet Selection
+            Back
           </button>
         </div>
       )}
