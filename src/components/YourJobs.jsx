@@ -3,6 +3,7 @@ import axios from "axios";
 import { EmailContext } from "../context/EmailContext";
 import { useNavigate } from "react-router-dom";
 import InterestedCandidatesModal from './InterestedCandidatesModal'; // Import the modal component
+import jobifyLogo from '../images/JOBIFY LOGO FULL.png';
 
 const YourJobs = () => {
     const [jobs, setJobs] = useState([]); // State to store fetched jobs
@@ -123,7 +124,7 @@ const YourJobs = () => {
             <header>
                 <div className="container">
                     <div className="logo">
-                        <img className="img" src="jobify logo full.png" alt="Jobify Logo" />
+                        <img className="img" src={jobifyLogo} alt="Jobify Logo" />
                     </div>
                     <nav>
                         <ul></ul>
@@ -137,17 +138,32 @@ const YourJobs = () => {
                 {error && <p className="text-red-500 text-center">{error}</p>}
 
                 {jobs.length === 0 ? (
+                    <div>
                     <p className="text-center text-green-500 text-lg">No jobs available. Please click on Add Job button to add jobs.</p>
+                     <button
+                            onClick={AddJobHandler}
+                            className="mt-6 bg-blue-500 text-white py-2 px-4 rounded"
+                        >
+                            Add Job
+                        </button></div>
                 ) : (
                     <div className="job-list mt-6">
+                       
                         <h2 className="text-3xl font-bold text-green-500 mb-4 text-center">Your Jobs</h2>
-
-                        <button
+                        <div id="topbuttons">
+                        <button id="button1"
                             onClick={toggleShowMarked}
                             className="mb-6 bg-purple-500 text-white py-2 px-4 rounded"
                         >
                             {showMarked ? "Show Unassigned Jobs" : "Show Assigned Jobs"}
                         </button>
+                        <button id="button1"
+                            onClick={AddJobHandler}
+                            className="mt-6 bg-blue-500 text-white py-2 px-4 rounded"
+                        >
+                            Add Job
+                        </button>
+                        </div>
 
                         <ul className="space-y-4">
                             {jobs
@@ -211,12 +227,7 @@ const YourJobs = () => {
                                 })}
                         </ul>
 
-                        <button
-                            onClick={AddJobHandler}
-                            className="mt-6 bg-blue-500 text-white py-2 px-4 rounded"
-                        >
-                            Add Job
-                        </button>
+                       
                     </div>
                 )}
 

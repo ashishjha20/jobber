@@ -72,7 +72,7 @@ const YourWork = () => {
     return (
         <div className="jobs-page">
             {error && <p className="error-message">{error}</p>}
-            <h2>Your Interested Jobs</h2>
+            <div id="tu"><h2>Your Interested Jobs</h2></div>
 
             {filteredJobs.length === 0 ? (
                 <p>No jobs found in your interested list.</p>

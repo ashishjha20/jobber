@@ -139,7 +139,7 @@ li p strong {
 /* Add Job Button */
 button {
     display: block;
-    margin: 40px auto 0;
+    margin: 10px auto 0;
     padding: 15px 30px;
     background-color: #29c329;
     color: #fff;
@@ -177,4 +177,13 @@ button:hover {
     padding: 20px;
     z-index: 200;
     border-radius: 10px;
+}
+
+#button1{
+    width: 35vw;
+    margin: 15px;
+}
+#topbuttons{
+    display: flex;
+  align-items: center;
 }

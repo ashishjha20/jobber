@@ -28,7 +28,7 @@ const Header = () => {
         
         <div className="header-buttons">
           <a href="/connect-wallet" className="connect-wallet">Connect Wallet</a>
-          <a href="#" className="get-start">Get Start</a>
+          <a href="/convert" className="get-start">Get Start</a>
         </div>
       </div>
     </header>

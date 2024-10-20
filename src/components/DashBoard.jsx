@@ -4,7 +4,7 @@ import axios from 'axios'; // Import axios for making HTTP requests
 import './dashboard.css';
 import { EmailContext } from "../context/EmailContext"; // Assuming the CSS is in the same directory
 import CryptoJS from 'crypto-js'; // Import crypto-js for hashing
-
+import jobifyLogo from '../images/JOBIFY LOGO FULL.png';
 const DashBoard = () => {
   const navigate = useNavigate(); // Call useNavigate
   const [showPopup, setShowPopup] = useState(false);
@@ -87,7 +87,7 @@ const DashBoard = () => {
       <header>
         <div className="container">
           <div className="logo">
-            <img className="img" src="" alt="Jobify Logo" />
+            <img className="img" src={jobifyLogo} alt="Jobify Logo" />
           </div>
           <nav>
             <ul>
@@ -118,8 +118,8 @@ const DashBoard = () => {
 
       {/* Pop-up for first-time login with bonus tokens */}
       {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
+        <div id='xxxx' className="popup">
+          <div id='xxxxx' className="popup-content">
             <h3>Congratulations!</h3>
             <p>As a new user, you will receive a bonus of 100 Jobify tokens!</p>
             <button onClick={closePopup} className="popup-close-btn">Close</button>

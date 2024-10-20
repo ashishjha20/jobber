@@ -11,6 +11,7 @@ import SeekJob from "./components/SeekJob.jsx";
 import YourWork from "./components/YourWork.jsx";
 import ConnectWallet from "./components/ConnectWallet.jsx";
 import IssuePage from "./components/IssuePage.jsx";
+import Converter from "./components/Converter.jsx";
 
 const App = () => {
   return (
@@ -34,7 +35,6 @@ const App = () => {
         <Route path="/addjobs" element={<AddJobs />}></Route>
         <Route path="/seekjobs" element={
           <div>
-            <AnimatedBackground></AnimatedBackground>
             <SeekJob />
           </div>}></Route>
       <Route path="/yourwork" element={<YourWork />}></Route>
@@ -45,6 +45,7 @@ const App = () => {
         </div>}></Route>
 
       <Route path="/issue" element={<IssuePage></IssuePage>}></Route>
+      <Route path="/convert" element={<Converter/>}></Route>
     </Routes>
 
 
